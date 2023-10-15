@@ -18,7 +18,7 @@
 export default {
   props:{
       chosen:{
-          type:Number
+          type:String
       }
   },
   mounted(){
@@ -32,15 +32,19 @@ export default {
   methods:{
     navItemClick1(){
       this.isActive=1;
+      console.log(1);
     },
     navItemClick2(){
       this.isActive=2;
+      console.log(2);
     },
     navItemClick3(){
       this.isActive=3;
+      console.log(3);
     },
     navItemClick4(){
       this.isActive=4;
+      console.log(4);
     },
     hamburgerClick(){
       this.$refs.tabbar.style.right = 0;
@@ -59,6 +63,7 @@ export default {
     height: 136px;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: 999;
     padding-top: 40px;
     display: flex;
@@ -159,7 +164,7 @@ export default {
   .box{
     width:100vw;
     height: 96px;
-    position: relative;
+    position: absolute;
     padding-top: 0;
     .hamburger{
       display: block;

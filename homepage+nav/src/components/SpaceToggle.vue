@@ -89,7 +89,7 @@ const ballTop = computed(() => {
     width: 210px;
     height: 60px;
     position: absolute;
-    top: calc( 60% - 30px );
+    top: calc( 85% - 30px );
     left: calc( 50% - 105px );
     gap: 16px;
     z-index: 2;

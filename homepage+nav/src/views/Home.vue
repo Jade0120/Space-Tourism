@@ -34,6 +34,7 @@ export default {
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
+    position: relative;
     .text{
       margin-bottom: 80px;
       margin-top: 43.1vh;
@@ -100,7 +101,6 @@ export default {
 @media screen and (max-width: 768px) and (min-width:377px){
   .body{
     background-image: url("@/assets/home/background-home-tablet.jpg");
-    position: relative;
     .text{
       flex-direction: column;
       margin-top: 19.7vh;
@@ -150,10 +150,8 @@ export default {
   .body{
     background-image: url("@/assets/home/background-home-mobile.jpg");
     .text{
-      position: relative;
-      z-index: 1;
       flex-direction: column;
-      margin-top: 16px;
+      margin-top: 16.7vh;
       .introduce{
         width: 327px;
         height: 276px;

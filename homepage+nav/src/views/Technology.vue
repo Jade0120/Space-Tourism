@@ -38,7 +38,7 @@ function changeShow(newPage) {
 
 <template>
   <div class="space-bg">
-    <Nav :chosen="4"></Nav>
+    <Nav chosen="4"></Nav>
     <div class="space-content">
       <div class="space-title font-barlow-condensed">
         <span class="space-num font-barlow">03</span><span class="space-text">SPACE LAUNCH 101</span>
@@ -61,6 +61,8 @@ function changeShow(newPage) {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -71,6 +73,7 @@ function changeShow(newPage) {
     height: 900px;
     min-height: 900px;
     position: relative;
+    margin-top: 180px;
   }
 
   .space-title {
@@ -101,6 +104,7 @@ function changeShow(newPage) {
   .space-content {
     width: 100%;
     height: max-content;
+    margin-top: 300px;
   }
 
   .space-title {
@@ -119,6 +123,7 @@ function changeShow(newPage) {
   .space-content {
     width: 100%;
     height: max-content;
+    margin-top: 150px;
   }
 
   .space-title {

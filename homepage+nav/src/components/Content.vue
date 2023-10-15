@@ -7,24 +7,24 @@
 
         methods:{
             toPage1(){
-                document.getElementsByTagName("h2")[0].innerHTML = this.crews[0][1];
-                document.getElementsByTagName("h1")[0].innerHTML = this.crews[0][0];
-                document.getElementById("info").innerHTML = this.crews[0][2];
+                document.getElementsByClassName("role")[0].innerHTML = this.crews[0][1];
+                document.getElementsByClassName("name")[0].innerHTML = this.crews[0][0];
+                document.getElementsByClassName("bio")[0].innerHTML = this.crews[0][2];
             },
             toPage2(){
-                document.getElementsByTagName("h2")[0].innerHTML = this.crews[1][1];
-                document.getElementsByTagName("h1")[0].innerHTML = this.crews[1][0];
-                document.getElementById("info").innerHTML = this.crews[1][2];
+                document.getElementsByClassName("role")[0].innerHTML = this.crews[1][1];
+                document.getElementsByClassName("name")[0].innerHTML = this.crews[1][0];
+                document.getElementsByClassName("bio")[0].innerHTML = this.crews[1][2];
             },
             toPage3(){
-                document.getElementsByTagName("h2")[0].innerHTML = this.crews[2][1];
-                document.getElementsByTagName("h1")[0].innerHTML = this.crews[2][0];
-                document.getElementById("info").innerHTML = this.crews[2][2];
+                document.getElementsByClassName("role")[0].innerHTML = this.crews[2][1];
+                document.getElementsByClassName("name")[0].innerHTML = this.crews[2][0];
+                document.getElementsByClassName("bio")[0].innerHTML = this.crews[2][2];
             },
             toPage4(){
-                document.getElementsByTagName("h2")[0].innerHTML = this.crews[3][1];
-                document.getElementsByTagName("h1")[0].innerHTML = this.crews[3][0];
-                document.getElementById("info").innerHTML = this.crews[3][2];
+                document.getElementsByClassName("role")[0].innerHTML = this.crews[3][1];
+                document.getElementsByClassName("name")[0].innerHTML = this.crews[3][0];
+                document.getElementsByClassName("bio")[0].innerHTML = this.crews[3][2];
             }
         }
     }
@@ -32,67 +32,91 @@
 
 <template>
     <div>
-        <h2>{{ crews[0][0] }}</h2>
-        <h1>{{ crews[0][1] }}</h1>
-        <div id="info">{{ crews[0][2] }}</div>
+        <p class="role">{{ crews[0][1] }}</p>
+        <p class="name">{{ crews[0][0] }}</p>
+        <p class="bio">{{ crews[0][2] }}</p>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     div{
         display: flex;
-        width: 100%;
+        width: 50%;
         flex-direction: column;
-        padding-top: 10vh;
-        text-align: center;
+        padding-top: 15vh;
+        .role{
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 1);
+            text-transform: uppercase;
+            font-family: var(--ff-accent);
+            font-size: 32px;
+            line-height: 37px;
+            letter-spacing: 0px;
+            text-align: left;
+            opacity: 50.42%;
+        }
+        .name{
+            margin:0 0 0.5rem 0;
+            color: rgba(255, 255, 255, 1);
+            text-transform: uppercase;
+            font-family: var(--ff-accent);
+            font-size: 56px;
+            line-height: 64px;
+            letter-spacing: 0px;
+            text-align: left;
+            white-space:nowrap; 
+        }
+        .bio{
+            padding: 0;
+            color: rgba(208, 214, 249, 1);
+            text-align: left;
+            font-family: var(--ff-primary);
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
     }
-
-    h1{
-        font-size: 3rem;
-        width: 50%;
-        font-weight: 300;
-        margin-bottom: 1rem;
-        color: white;
-        text-transform: uppercase;
+@media screen and (max-width: 888px) and (min-width:500px){
+    div{
+        padding-top: 8vh;
+        .role{
+            text-align: center;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0px;
+        }
+        .name{
+            text-align: center;
+            font-size: 40px;
+            line-height: 46px;
+            letter-spacing: 0px;
+        }
+        .bio{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0px;
+        }
     }
-
-    h2{
-        font-size: 2rem;
-        width: 50%;
-        font-weight: 300;
-        margin-bottom: 0.5rem;
-        color: grey;
-        text-transform: uppercase;
-    }
-
-    #info{
-        padding: 0;
-        width: 45%;
-        color: rgb(201, 219, 235);
-        font-weight: 100;
-        font-size: 1rem;
-        line-height: 2rem;
-    }
-
-    @media all and (max-width: 888px){
-      div {
+}
+@media all and (max-width: 888px){
+    div {
         width: 100%;
         align-items: center;
-      }
-
-      h1 {
-        width: 100%;
-      }
-
-      h2 {
-        width: 100%;
-      }
-
-      #info {
-        width: 90%;
-        text-align: center;
-      }
-
-
+        .role {
+            width: 100%;
+            text-align: center;
+        }
+        .name {
+            width: 100%;
+            text-align: center;
+        }
+        .bio {
+            width: 90%;
+            text-align: center;
+        }
     }
+}
 </style>
